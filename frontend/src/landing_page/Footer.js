@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -13,43 +14,43 @@ function Footer() {
           </div>
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <Link to="/about">About</Link>
             <br />
-            <a href="">Products</a>
+            <Link to="/product">Products</Link>
             <br />
-            <a href="">Pricing</a>
+            <Link to="/pricing">Pricing</Link>
             <br />
-            <a href="">Referral programme</a>
+            <Link to="/referral">Referral programme</Link>
             <br />
-            <a href="">Careers</a>
+            <Link to="/careers">Careers</Link>
             <br />
-            <a href="">Zerodha.tech</a>
+            <Link to="/zerodha-tech">Zerodha.tech</Link>
             <br />
-            <a href="">Press & media</a>
+            <Link to="/press-media">Press & media</Link>
             <br />
-            <a href="">Zerodha cares (CSR)</a>
+            <Link to="/zerodha-cares">Zerodha cares (CSR)</Link>
             <br />
           </div>
           <div className="col">
             <p>Support</p>
-            <a href="">Contact</a>
+            <Link to="/contact">Contact</Link>
             <br />
-            <a href="">Support portal</a>
+            <Link to="/support">Support portal</Link>
             <br />
-            <a href="">Z-Connect blog</a>
+            <Link to="/z-connect-blog">Z-Connect blog</Link>
             <br />
-            <a href="">List of charges</a>
+            <Link to="/list-of-charges">List of charges</Link>
             <br />
-            <a href="">Downloads & resources</a>
+            <Link to="/downloads-resources">Downloads & resources</Link>
             <br />
           </div>
           <div className="col">
             <p>Account</p>
-            <a href="">Open an account</a>
+            <Link to="/open-account">Open an account</Link>
             <br />
-            <a href="">Fund transfer</a>
+            <Link to="/fund-transfer">Fund transfer</Link>
             <br />
-            <a href="">60 day challenge</a>
+            <Link to="/60-day-challenge">60 day challenge</Link>
             <br />
           </div>
         </div>
