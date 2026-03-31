@@ -119,7 +119,7 @@ const WatchListItem = ({ stock }) => {
           {stock.isDown ? (
             <KeyboardArrowDown className="down" />
           ) : (
-            <KeyboardArrowUp className="down" />
+            <KeyboardArrowUp className="up" />
           )}
           <span className="price">{stock.price}</span>
         </div>
@@ -162,7 +162,7 @@ const WatchListActions = ({ uid }) => {
           arrow
           TransitionComponent={Grow}
         >
-          <button className="action">
+          <button className="action mt-5">
             <BarChartOutlined className="icon" />
           </button>
         </Tooltip>

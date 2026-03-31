@@ -10,7 +10,7 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 8000;
 const uri = process.env.MONGO_URL;
 
 const app = express();
@@ -137,10 +137,10 @@ app.use(bodyParser.json());
 //       qty: item.qty,
 //       avg: item.avg,
 //       price: item.price,
-//       net: item.day,
+//       net: item.net,
 //       day: item.day,
 //     });
-
+// //insertion into db
 //     newHolding.save();
 //   });
 //   res.send("Done!");
@@ -210,8 +210,16 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved!");
 });
 
-app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(uri);
-  console.log("DB started!");
-});
+// app.listen(PORT, () => {
+//   console.log("App started!");
+//   mongoose.connect(uri);
+//  console.log("DB started!");
+// });
+mongoose.connect(uri)
+  .then(() => {
+    console.log("DB connected!");
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch(err => console.log(err));
